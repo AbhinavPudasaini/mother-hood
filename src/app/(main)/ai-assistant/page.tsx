@@ -226,7 +226,7 @@ const AiAssistant = () => {
                             </div>
                             <div>
                                 <h3 className="font-semibold text-gray-800">{userProfile?.fullName || 'Loading...'}</h3>
-                                <p className="text-sm text-gray-600">Week {userProfile?.days} • Due {userProfile?.dueDate || 'N/A'}</p>
+{/*                                 <p className="text-sm text-gray-600">Week {userProfile?.days} • Due {userProfile?.dueDate || 'N/A'}</p> */}
                             </div>
                         </div>
                     </div>
@@ -338,5 +338,6 @@ const AiAssistant = () => {
 
 
 export default AiAssistant;
+
 
 
