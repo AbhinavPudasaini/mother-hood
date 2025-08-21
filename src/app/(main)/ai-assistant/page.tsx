@@ -77,16 +77,10 @@ const AiAssistant = () => {
     So talk in a very mother way. Use emojis and friendly tone while talking. Your answer should be short and sweet always. 
     The current pregnancy day is : 122
     If asked about diet plan, or what to eat, you will answer based on the diet preferences that is :
-    
-    Diet type : ${userProfile.dietPreferences},
-    Diet Allergy : ${userProfile.dietAllergy},
-    Total meat taken in a day : ${userProfile.meals}
-    You can also give diet suggestions based on the location : ${userProfile.location}
+  
 
     If User ask about the medicine or any kind of emergency suggestions, you should tell on the basis of following:
-    complications : ${userProfile.complications},
-    medical condition : ${userProfile.conditions}
-    Currenrt medicines : ${userProfile.medicines}
+
 
     `;
     const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
@@ -225,7 +219,7 @@ const AiAssistant = () => {
                                 <Baby className="w-6 h-6 text-pink-500" />
                             </div>
                             <div>
-                                <h3 className="font-semibold text-gray-800">{userProfile?.fullName || 'Loading...'}</h3>
+{/*                                 <h3 className="font-semibold text-gray-800">{userProfile?.fullName || 'Loading...'}</h3> */}
 {/*                                 <p className="text-sm text-gray-600">Week {userProfile?.days} • Due {userProfile?.dueDate || 'N/A'}</p> */}
                             </div>
                         </div>
@@ -240,15 +234,15 @@ const AiAssistant = () => {
                         <div className="space-y-2 text-sm">
                             <div>
                                 <span className="text-gray-600">Complications:</span>
-                                <span className="ml-2 text-gray-800">{userProfile?.complications || 'None'}</span>
+{/*                                 <span className="ml-2 text-gray-800">{userProfile?.complications || 'None'}</span> */}
                             </div>
                             <div>
                                 <span className="text-gray-600">Allergies:</span>
-                                <span className="ml-2 text-gray-800">{userProfile?.dietAllergy || 'None'}</span>
+{/*                                 <span className="ml-2 text-gray-800">{userProfile?.dietAllergy || 'None'}</span> */}
                             </div>
                             <div>
                                 <span className="text-gray-600">Medications:</span>
-                                <span className="ml-2 text-gray-800">{userProfile?.medicines || 'None'}</span>
+{/*                                 <span className="ml-2 text-gray-800">{userProfile?.medicines || 'None'}</span> */}
                             </div>
                         </div>
                     </div>
@@ -262,15 +256,15 @@ const AiAssistant = () => {
                         <div className="space-y-2 text-sm">
                             <div>
                                 <span className="text-gray-600">DIest Type:</span>
-                                <span className="ml-2 text-gray-800">{userProfile?.dietPreferences || 'None'}</span>
+{/*                                 <span className="ml-2 text-gray-800">{userProfile?.dietPreferences || 'None'}</span> */}
                             </div>
                             <div>
                                 <span className="text-gray-600">Allergies:</span>
-                                <span className="ml-2 text-gray-800">{userProfile?.dietAllergy || 'None'}</span>
+{/*                                 <span className="ml-2 text-gray-800">{userProfile?.dietAllergy || 'None'}</span> */}
                             </div>
                             <div>
                                 <span className="text-gray-600">Total meals a day:</span>
-                                <span className="ml-2 text-gray-800">{userProfile?.meals || 'None'}</span>
+{/*                                 <span className="ml-2 text-gray-800">{userProfile?.meals || 'None'}</span> */}
                             </div>
                         </div>
                     </div>
@@ -338,6 +332,7 @@ const AiAssistant = () => {
 
 
 export default AiAssistant;
+
 
 
 
