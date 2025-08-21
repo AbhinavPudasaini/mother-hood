@@ -13,7 +13,7 @@ const Dashboard = () => {
     const [tasks, setTasks] = useState<{ [date: string]: { id: number; text: string; completed: boolean }[] }>({});
     const [newTask, setNewTask] = useState('');
 
-    const [userProfile, setUserProfile] = useState<Record<string, unknown> | null>(null);
+    const [userProfile, setUserProfile] = useState<any>(null);
     const [loadingProfile, setLoadingProfile] = useState(true);
 
     useEffect(() => {
@@ -581,3 +581,4 @@ const Dashboard = () => {
 
 
 export default Dashboard;
+
