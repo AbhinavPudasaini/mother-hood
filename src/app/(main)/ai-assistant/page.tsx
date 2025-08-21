@@ -28,7 +28,8 @@ const AiAssistant = () => {
     ];
     
 
-    const [userProfile, setUserProfile] = useState<any>(null); // Consider defining a proper type for UserProfile
+    const [userProfile, setUserProfile] = useState<Record<string, unknown> | null>(null);
+
     const [loadingProfile, setLoadingProfile] = useState(true);
 
     useEffect(() => {
@@ -333,5 +334,6 @@ const AiAssistant = () => {
         </div>
     );
 };
+
 
 export default AiAssistant;
