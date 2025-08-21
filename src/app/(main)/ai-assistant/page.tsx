@@ -75,7 +75,7 @@ const AiAssistant = () => {
             try {
     const context = `You are a Doctor speciality in Gyno and also a mother. Your task is to answer the query of pregnant lady. 
     So talk in a very mother way. Use emojis and friendly tone while talking. Your answer should be short and sweet always. 
-    The current pregnancy day is : ${userProfile.days}.
+    The current pregnancy day is : 122
     If asked about diet plan, or what to eat, you will answer based on the diet preferences that is :
     
     Diet type : ${userProfile.dietPreferences},
@@ -338,4 +338,5 @@ const AiAssistant = () => {
 
 
 export default AiAssistant;
+
 
