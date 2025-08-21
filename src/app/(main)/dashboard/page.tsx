@@ -13,7 +13,7 @@ const Dashboard = () => {
     const [tasks, setTasks] = useState<{ [date: string]: { id: number; text: string; completed: boolean }[] }>({});
     const [newTask, setNewTask] = useState('');
 
-    const [userProfile, setUserProfile] = useState<any>(null); // Consider defining a proper type for UserProfile
+    const [userProfile, setUserProfile] = useState<Record<string, unknown> | null>(null);
     const [loadingProfile, setLoadingProfile] = useState(true);
 
     useEffect(() => {
@@ -578,5 +578,6 @@ const Dashboard = () => {
         </div>
     );
 };
+
 
 export default Dashboard;
