@@ -28,7 +28,8 @@ const AiAssistant = () => {
     ];
     
 
-    const [userProfile, setUserProfile] = useState<any>(null);
+    const [userProfile, setUserProfile] = useState<Record<string, unknown> | null>(null);
+
 
     const [loadingProfile, setLoadingProfile] = useState(true);
 
@@ -337,3 +338,4 @@ const AiAssistant = () => {
 
 
 export default AiAssistant;
+
