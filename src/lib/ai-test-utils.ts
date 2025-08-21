@@ -18,7 +18,13 @@ export const createTestStory = (theme: string = 'default'): StoryData => ({
 export const runAIServiceTests = async (): Promise<{
   passed: number;
   failed: number;
-  results: any[];
+  results: Array<{
+    name: string;
+    passed: boolean;
+    result?: unknown;
+    expected?: unknown;
+    error?: string;
+  }>;
 }> => {
   console.log('🧪 Running AI Service Tests...\n');
   
@@ -166,4 +172,5 @@ export const performanceTest = async (iterations: number = 3): Promise<{
   console.log(`Success rate: ${validResults.length}/${iterations} (${(validResults.length/iterations*100).toFixed(1)}%)`);
 
   return { averageTime, results };
+
 };
