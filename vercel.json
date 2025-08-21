@@ -1,0 +1,14 @@
+{
+  "buildCommand": "npm ci && npm run build",
+  "installCommand": "npm ci --timeout=300000 --legacy-peer-deps",
+  "framework": "nextjs",
+  "regions": ["iad1"],
+  "functions": {
+    "app/api/**/*.js": {
+      "maxDuration": 30
+    }
+  },
+  "env": {
+    "NODE_OPTIONS": "--max-old-space-size=4096"
+  }
+}
