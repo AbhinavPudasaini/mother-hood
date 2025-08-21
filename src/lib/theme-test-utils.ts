@@ -37,7 +37,20 @@ export const testStories = [
 ];
 
 // Validate theme assignment accuracy
-export const validateThemeAssignments = (): { passed: number; failed: number; results: any[] } => {
+export const validateThemeAssignments = (): { 
+  passed: number; 
+  failed: number; 
+  results: Array<{
+    title: string;
+    expected: string;
+    assigned1: string;
+    assigned2: string;
+    passed1: boolean;
+    passed2: boolean;
+    compatible1: boolean;
+    compatible2: boolean;
+  }>;
+} => {
   const results = testStories.map(story => {
     const assignedTheme1 = assignThemeFromContent(story.title, story.trimester, story.snippet);
     const assignedTheme2 = assignThemeByScore(story.title, story.trimester, story.snippet);
@@ -85,4 +98,5 @@ export const runThemeTests = (): void => {
   console.log(`Invalid theme: ${validateTheme('invalid-theme')} ❌\n`);
   
   console.log('🎯 Theme Assignment System Ready!');
+
 };
