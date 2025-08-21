@@ -28,7 +28,7 @@ const AiAssistant = () => {
     ];
     
 
-    const [userProfile, setUserProfile] = useState<Record<string, unknown> | null>(null);
+    const [userProfile, setUserProfile] = useState<any>(null);
 
     const [loadingProfile, setLoadingProfile] = useState(true);
 
